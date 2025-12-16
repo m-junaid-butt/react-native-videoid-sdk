@@ -1,16 +1,21 @@
-const path = require('path');
+// example/metro.config.js
 const { getDefaultConfig } = require('@react-native/metro-config');
-const { withMetroConfig } = require('react-native-monorepo-config');
+const path = require('path');
 
-const root = path.resolve(__dirname, '..');
+const config = getDefaultConfig(__dirname);
 
-/**
- * Metro configuration
- * https://facebook.github.io/metro/docs/configuration
- *
- * @type {import('metro-config').MetroConfig}
- */
-module.exports = withMetroConfig(getDefaultConfig(__dirname), {
-  root,
-  dirname: __dirname,
-});
+// Add these configurations
+config.watchFolders = [path.resolve(__dirname, '..')];
+
+config.resolver = {
+  ...config.resolver,
+  extraNodeModules: {
+    'react-native-videoid-sdk': path.resolve(__dirname, '../src'),
+  },
+  nodeModulesPaths: [
+    path.resolve(__dirname, 'node_modules'),
+    path.resolve(__dirname, '../node_modules'),
+  ],
+};
+
+module.exports = config;

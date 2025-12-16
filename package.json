@@ -2,44 +2,26 @@
   "name": "react-native-videoid-sdk",
   "version": "0.1.0",
   "description": "VideoID Verification",
-  "main": "./lib/module/index.js",
-  "types": "./lib/typescript/src/index.d.ts",
-  "exports": {
-    ".": {
-      "source": "./src/index.tsx",
-      "types": "./lib/typescript/src/index.d.ts",
-      "default": "./lib/module/index.js"
-    },
-    "./package.json": "./package.json"
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "module",
+      "typescript"
+    ]
+  },
+  "scripts": {
+    "build": "bob build",
+    "prepare": "npm run build"
   },
   "files": [
     "src",
     "lib",
-    "android",
     "ios",
-    "cpp",
-    "*.podspec",
-    "react-native.config.js",
-    "!ios/build",
-    "!android/build",
-    "!android/gradle",
-    "!android/gradlew",
-    "!android/gradlew.bat",
-    "!android/local.properties",
-    "!**/__tests__",
-    "!**/__fixtures__",
-    "!**/__mocks__",
-    "!**/.*"
+    "*.podspec"
   ],
-  "scripts": {
-    "example": "yarn workspace react-native-videoid-sdk-example",
-    "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build lib",
-    "build": "bob build",
-    "typecheck": "tsc",
-    "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "release": "release-it --only-version",
-    "test": "jest"
-  },
   "keywords": [
     "react-native",
     "ios",
@@ -87,28 +69,6 @@
   "peerDependencies": {
     "react": "*",
     "react-native": "*"
-  },
-  "workspaces": [
-    "example"
-  ],
-  "packageManager": "yarn@4.11.0",
-  "react-native-builder-bob": {
-    "source": "src",
-    "output": "lib",
-    "targets": [
-      [
-        "module",
-        {
-          "esm": true
-        }
-      ],
-      [
-        "typescript",
-        {
-          "project": "tsconfig.build.json"
-        }
-      ]
-    ]
   },
   "codegenConfig": {
     "name": "VideoidSdkSpec",

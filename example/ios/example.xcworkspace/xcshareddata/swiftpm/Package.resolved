@@ -1,0 +1,42 @@
+{
+  "originHash" : "41f3f87e870814590f7de2bfe40f6719c0923a74d17fccf3fde1dcbfa7410dfc",
+  "pins" : [
+    {
+      "identity" : "lottie-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/airbnb/lottie-spm.git",
+      "state" : {
+        "revision" : "1d29eccc24cc8b75bff9f6804155112c0ffc9605",
+        "version" : "4.4.3"
+      }
+    },
+    {
+      "identity" : "openssl",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/krzyzanowskim/OpenSSL.git",
+      "state" : {
+        "revision" : "e7d34385da795aaaeb2212e38c7401e5c333f792",
+        "version" : "3.6.1"
+      }
+    },
+    {
+      "identity" : "videoidskd-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/signicat/videoidskd-spm.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "6be1c98374832d6337597229b4086577d407e717"
+      }
+    },
+    {
+      "identity" : "webrtc",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/stasel/WebRTC.git",
+      "state" : {
+        "revision" : "5b2eb61cace7d62726b29a38b768b07d6bc55c45",
+        "version" : "134.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}
