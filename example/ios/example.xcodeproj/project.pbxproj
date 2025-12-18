@@ -10,22 +10,36 @@
 		121C54BAF2A416E7A11598BB /* libPods-example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 357197F44114A00FE7ACA486 /* libPods-example.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		182EC6942EE885E800492663 /* VideoIDSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 182EC6932EE885E800492663 /* VideoIDSDK */; };
+		188685DA2EF2DAF600032F0F /* VideoIDSDK in Frameworks */ = {isa = PBXBuildFile; productRef = A8619BE2764D59C5B1BF65F3 /* VideoIDSDK */; };
 		188E48A72EE880E60001FC64 /* VideoIDSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 188E48A62EE880E60001FC64 /* VideoIDSDK */; };
 		28F9496A1732FFE993D11152 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		610EA77D186C3667EC54DBBF /* VideoIDModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8891E3FB934720931D79E5 /* VideoIDModule.m */; };
+		6E742F737776A48E784EDF58 /* GetVideoIDAuthorizationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA75E76620137839B1C95691 /* GetVideoIDAuthorizationInteractor.swift */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		871980BCE2ED54F6F9AC757C /* VideoIDModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 539CAA8BB53EE4FF2D6D2459 /* VideoIDModule.m */; };
+		8DC73102283F13B3E3E8EC54 /* VideoIDSDKSwiftBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65010DB4A6ADC6FCAC8D1626 /* VideoIDSDKSwiftBridge.swift */; };
+		A8AD6D97A5DB778D92E453C2 /* VideoIDSDKBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD6D96A5DB778D92E453C1 /* VideoIDSDKBridge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C8891E3FB934720931D79E5 /* VideoIDModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VideoIDModule.m; sourceTree = "<group>"; };
 		0EAEFB9F0147C5EA648530A4 /* Pods-example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-example.release.xcconfig"; path = "Target Support Files/Pods-example/Pods-example.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = example.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = example/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = example/Info.plist; sourceTree = "<group>"; };
-		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = example/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		13C4F4B16F52A9DF74A21BA0 /* VideoIDModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VideoIDModule.h; sourceTree = "<group>"; };
 		357197F44114A00FE7ACA486 /* libPods-example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = example/AppDelegate.swift; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = example/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		539CAA8BB53EE4FF2D6D2459 /* VideoIDModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VideoIDModule.m; sourceTree = "<group>"; };
+		65010DB4A6ADC6FCAC8D1626 /* VideoIDSDKSwiftBridge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VideoIDSDKSwiftBridge.swift; sourceTree = "<group>"; };
+		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A58D980F34012FDB6BDCB7B8 /* Pods-example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-example.debug.xcconfig"; path = "Target Support Files/Pods-example/Pods-example.debug.xcconfig"; sourceTree = "<group>"; };
+		A8AD6D95A5DB778D92E453C0 /* VideoIDSDKBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VideoIDSDKBridge.h; sourceTree = "<group>"; };
+		A8AD6D96A5DB778D92E453C1 /* VideoIDSDKBridge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VideoIDSDKBridge.m; sourceTree = "<group>"; };
+		E871A1EF07873EB5D35737C4 /* VideoIDModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VideoIDModule.h; sourceTree = "<group>"; };
+		EA75E76620137839B1C95691 /* GetVideoIDAuthorizationInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetVideoIDAuthorizationInteractor.swift; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -34,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				188685DA2EF2DAF600032F0F /* VideoIDSDK in Frameworks */,
 				182EC6942EE885E800492663 /* VideoIDSDK in Frameworks */,
 				188E48A72EE880E60001FC64 /* VideoIDSDK in Frameworks */,
 				121C54BAF2A416E7A11598BB /* libPods-example.a in Frameworks */,
@@ -51,8 +66,16 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
+				0C8891E3FB934720931D79E5 /* VideoIDModule.m */,
+				13C4F4B16F52A9DF74A21BA0 /* VideoIDModule.h */,
+				539CAA8BB53EE4FF2D6D2459 /* VideoIDModule.m */,
+				E871A1EF07873EB5D35737C4 /* VideoIDModule.h */,
+				65010DB4A6ADC6FCAC8D1626 /* VideoIDSDKSwiftBridge.swift */,
+				A8AD6D95A5DB778D92E453C0 /* VideoIDSDKBridge.h */,
+				A8AD6D96A5DB778D92E453C1 /* VideoIDSDKBridge.m */,
+				EA75E76620137839B1C95691 /* GetVideoIDAuthorizationInteractor.swift */,
 			);
-			name = example;
+			path = example;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -122,6 +145,9 @@
 			dependencies = (
 			);
 			name = example;
+			packageProductDependencies = (
+				A8619BE2764D59C5B1BF65F3 /* VideoIDSDK */,
+			);
 			productName = example;
 			productReference = 13B07F961A680F5B00A75B9A /* example.app */;
 			productType = "com.apple.product-type.application";
@@ -254,6 +280,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				761780ED2CA45674006654EE /* AppDelegate.swift in Sources */,
+				610EA77D186C3667EC54DBBF /* VideoIDModule.m in Sources */,
+				871980BCE2ED54F6F9AC757C /* VideoIDModule.m in Sources */,
+				A8AD6D97A5DB778D92E453C2 /* VideoIDSDKBridge.m in Sources */,
+				8DC73102283F13B3E3E8EC54 /* VideoIDSDKSwiftBridge.swift in Sources */,
+				6E742F737776A48E784EDF58 /* GetVideoIDAuthorizationInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +298,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = JSKJJ7ACH6;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = example/Info.plist;
@@ -283,6 +315,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.morepaws.app.ios;
 				PRODUCT_NAME = example;
+				SWIFT_OBJC_BRIDGING_HEADER = "example/example-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "example-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -296,6 +330,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = JSKJJ7ACH6;
 				INFOPLIST_FILE = example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
@@ -311,6 +346,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.morepaws.app.ios;
 				PRODUCT_NAME = example;
+				SWIFT_OBJC_BRIDGING_HEADER = "example/example-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "example-Swift.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -527,6 +565,11 @@
 			productName = VideoIDSDK;
 		};
 		188E48A62EE880E60001FC64 /* VideoIDSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 188E48A52EE880E60001FC64 /* XCRemoteSwiftPackageReference "videoidskd-spm" */;
+			productName = VideoIDSDK;
+		};
+		A8619BE2764D59C5B1BF65F3 /* VideoIDSDK */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 188E48A52EE880E60001FC64 /* XCRemoteSwiftPackageReference "videoidskd-spm" */;
 			productName = VideoIDSDK;

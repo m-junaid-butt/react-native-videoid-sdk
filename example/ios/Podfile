@@ -10,8 +10,10 @@ target 'example' do
     :path => '../node_modules/react-native'
   )
 
-  # Your SDK - path is CORRECT
+  # Your SDK - path is CORRECT  
   pod 'react-native-videoid-sdk', :path => '../../ios'
+  
+  # VideoIDSDK is provided via SPM (already added to Xcode project)
   
   post_install do |installer|
     react_native_post_install(installer)
@@ -25,6 +27,19 @@ target 'example' do
         
         # Add React module support
         config.build_settings['CLANG_ENABLE_MODULES'] = 'YES'
+      end
+    end
+    
+    # Remove duplicate VideoIDSDK and WebRTC frameworks from being embedded by CocoaPods
+    # since they're already added via SPM in the main project
+    installer.pods_project.targets.each do |target|
+      if target.name == 'example'
+        target.build_phases.each do |phase|
+          if phase.is_a?(Xcodeproj::Project::Object::PBXShellScriptBuildPhase) && phase.name == '[CP] Embed Pods Frameworks'
+            phase.input_paths.delete_if { |path| path.include?('VideoIDSDK.framework') || path.include?('WebRTC.framework') }
+            phase.output_paths.delete_if { |path| path.include?('VideoIDSDK.framework') || path.include?('WebRTC.framework') }
+          end
+        end
       end
     end
   end

@@ -9,8 +9,9 @@ Pod::Spec.new do |s|
   
   s.platform     = :ios, '16.0'
   
-  # Include both Objective-C and Swift files
-  s.source_files = "ios/*.{h,m,swift}"
+  # Empty source files - actual bridge code is in the app target
+  s.source_files = "*.{h}"
+  s.public_header_files = "*.h"
   
   # Swift version
   s.swift_version = '5.0'
@@ -18,6 +19,7 @@ Pod::Spec.new do |s|
   s.dependency "React-Core"
   
   s.pod_target_xcconfig = {
-    "DEFINES_MODULE" => "YES"
+    "DEFINES_MODULE" => "YES",
+    "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES" => "YES"
   }
 end

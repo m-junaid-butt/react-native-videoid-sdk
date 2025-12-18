@@ -4,13 +4,7 @@
 #import <React/RCTUtils.h>
 #import <React/RCTConvert.h>
 #import <UIKit/UIKit.h>
-
-// Import VideoIDSDK framework
-#if __has_include(<VideoIDSDK/VideoIDSDK-Swift.h>)
-#import <VideoIDSDK/VideoIDSDK-Swift.h>
-#else
-@import VideoIDSDK;
-#endif
+#import "VideoIDSDKBridge.h"
 
 @implementation VideoIDModule
 
@@ -52,24 +46,24 @@ RCT_EXPORT_METHOD(startWithCustomStyle:(NSDictionary *)params
       return;
     }
     
-    // Create SDK environment
-    SDKEnvironment *environment = [[SDKEnvironment alloc] initWithUrl:endpoint authorization:bearer];
-    
-    // Create VideoID view controller
-    VideoIDSDKViewController *videoIDVC = [[VideoIDSDKViewController alloc] initWithEnvironment:environment
-                                                                                         docType:documentID
-                                                                                        language:language];
-    
-    videoIDVC.modalPresentationStyle = UIModalPresentationFullScreen;
-    
-    // Store completion handler (we'll handle delegate in the example app)
-    // For now, just present the view controller
-    dispatch_async(dispatch_get_main_queue(), ^{
-      [rootVC presentViewController:videoIDVC animated:YES completion:^{
-        // VideoID is presented - result will come through delegate
-        resolve(@{@"status": @"presented"});
-      }];
-    });
+    // Use VideoIDSDKBridge to handle VideoID SDK initialization
+    [[VideoIDSDKBridge shared] startVideoIDWithEndpoint:endpoint
+                                                 bearer:bearer
+                                             rAuthority:rAuthority
+                                             documentID:documentID
+                                               language:language
+                                         viewController:rootVC
+                                             completion:^(NSString *videoID, NSString *error, NSString *canceled) {
+        if (error) {
+            reject(@"VIDEO_ID_ERROR", error, nil);
+        } else if (canceled) {
+            reject(@"VIDEO_ID_CANCELED", @"User canceled", nil);
+        } else if (videoID) {
+            resolve(@{@"videoId": videoID, @"status": @"completed"});
+        } else {
+            resolve(@{@"status": @"presented"});
+        }
+    }];
   });
 }
 
@@ -103,23 +97,24 @@ RCT_EXPORT_METHOD(start:(NSDictionary *)params
       return;
     }
     
-    // Create SDK environment
-    SDKEnvironment *environment = [[SDKEnvironment alloc] initWithUrl:endpoint authorization:bearer];
-    
-    // Create VideoID view controller
-    VideoIDSDKViewController *videoIDVC = [[VideoIDSDKViewController alloc] initWithEnvironment:environment
-                                                                                         docType:documentID
-                                                                                        language:language];
-    
-    videoIDVC.modalPresentationStyle = UIModalPresentationFullScreen;
-    
-    // Present the view controller
-    dispatch_async(dispatch_get_main_queue(), ^{
-      [rootVC presentViewController:videoIDVC animated:YES completion:^{
-        // VideoID is presented - result will come through delegate
-        resolve(@{@"status": @"presented"});
-      }];
-    });
+    // Use VideoIDSDKBridge to handle VideoID SDK initialization
+    [[VideoIDSDKBridge shared] startVideoIDWithEndpoint:endpoint
+                                                 bearer:bearer
+                                             rAuthority:rAuthority
+                                             documentID:documentID
+                                               language:language
+                                         viewController:rootVC
+                                             completion:^(NSString *videoID, NSString *error, NSString *canceled) {
+        if (error) {
+            reject(@"VIDEO_ID_ERROR", error, nil);
+        } else if (canceled) {
+            reject(@"VIDEO_ID_CANCELED", @"User canceled", nil);
+        } else if (videoID) {
+            resolve(@{@"videoId": videoID, @"status": @"completed"});
+        } else {
+            resolve(@{@"status": @"presented"});
+        }
+    }];
   });
 }
 
