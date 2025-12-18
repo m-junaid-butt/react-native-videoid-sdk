@@ -45,7 +45,6 @@ const App = () => {
       const result = await VideoIDSDK.startWithCustomStyle(config, styleConfig);
 
       console.log('VideoID with custom style completed:', result);
-
       if (result.videoID) {
         Alert.alert('Success', `VideoID: ${result.videoID}`);
       } else {
